@@ -42,4 +42,28 @@ pipeline {
         }
         
     }
+    
+    post{
+        
+        success{
+            script{
+                emailext from: "navkirat94@gmail.com",
+                to: "navkirat94@gmail.com",
+                subject: "BUILD SUCCESS",
+                body: "DEMO CICD APPLICAtION HAS BEEN SUCCESSFULLY DEPLOYED"
+            }    
+        }
+        
+        failure{
+            script{
+                emailext from: "navkirat94@gmail.com",
+                to: "navkirat94@gmail.com",
+                subject: "BUILD FAILURE",
+                body: "DEMO CICD APPLICATION HAS BEEN FAILED INCORRECTLY"
+                
+            }
+            
+        }
+    }
+    
 }
