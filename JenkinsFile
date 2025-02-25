@@ -16,7 +16,7 @@ pipeline {
         
         stage("CODE TEST"){
             steps{
-                echo "CODE WILL BE TESTED BY DEVELOPER"
+                echo "CODE WILL BE TESTED BY DEVELOPER..."
             }
         }
         
